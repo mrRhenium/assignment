@@ -6,7 +6,9 @@ import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 
 const ThemeButton = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(
+    (typeof window !== "undefined" && localStorage.getItem("theme")) || "light"
+  );
 
   useEffect(() => {
     theme === "light"

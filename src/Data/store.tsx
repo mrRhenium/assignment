@@ -264,17 +264,22 @@ const data: UserData[] = [
   },
 ];
 
-let storedData = localStorage.getItem("UserData");
+if (typeof window !== "undefined") {
+  let storedData = localStorage.getItem("UserData");
 
-if (!storedData) {
-  localStorage.setItem("UserData", JSON.stringify(data));
+  if (!storedData) {
+    localStorage.setItem("UserData", JSON.stringify(data));
+  }
 }
 
 export const Context = createContext<GlobalStore | null>(null);
 
 export function ContextProvider({ children }: { children: ReactNode }) {
   const [userData, setUserData] = useState<UserData[]>(() => {
-    const users = localStorage.getItem("UserData") || "[]";
+    const users =
+      (typeof window !== "undefined" && localStorage.getItem("UserData")) ||
+      JSON.stringify(data);
+
     return JSON.parse(users) as UserData[];
   });
 
