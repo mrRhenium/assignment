@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.upperSection {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  height: 10%;
+  border: 0.1rem solid var(--light-border);
+  background-color: var(--secondary-bg);
+}
+
+.upperSection h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-text);
+}
+
+.upperSection .avtarCover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--secondary-text);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.3rem solid var(--dark-border);
+}
+
+.middleSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+}
+
+.lowerSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}

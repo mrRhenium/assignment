@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inclusive Sans", sans-serif;
+  /* font-family: "Lucida Sans"; */
+}
+
+:root {
+  --light-border: #000000;
+  --dark-border: #ffffff;
+  --primary-text: #000000;
+  --secondary-text: #ffffff;
+  --primary-bg: #ffffff;
+  --secondary-bg: #413636;
+  --popUp-bg-light: rgb(0, 0, 0, 0.5);
+  --popUp-bg-dark: white;
+}
+
+:root body.darkTheme {
+  --light-border: #ffffff;
+  --dark-border: #ffffff;
+  --secondary-text: #ffffff;
+  --primary-text: #ffffff;
+  --primary-bg: #000000;
+  --secondary-bg: rgb(55, 50, 50);
+  --popUp-bg-light: rgb(255, 255, 255, 0.2);
+  --popUp-bg-dark: black;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-bg);
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 58.5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 62.5%;
+  }
+}
