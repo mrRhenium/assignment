@@ -5,14 +5,14 @@ import UserPopUp from "./UserPopUp";
 import { useStore } from "@/Data/store";
 
 const PopUpContainer = () => {
-  const { setPopUpHandler } = useStore();
+  const { popUp, setPopUpHandler } = useStore();
 
   return (
     <div className={style.popUpCont}>
       <div
         className={style.popUpBG}
         onClick={() => {
-          setPopUpHandler({ item: "", flag: false });
+          setPopUpHandler({ user: popUp.user, item: "", flag: false });
         }}
       ></div>
       <div className={style.popUp}>
