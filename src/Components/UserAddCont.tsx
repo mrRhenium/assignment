@@ -10,7 +10,19 @@ const UserAddCont = () => {
       <button
         className={style.userAddBtn}
         onClick={() => {
-          setPopUpHandler({ user: popUp.user, item: "submit", flag: true });
+          setPopUpHandler({
+            user: {
+              id: "",
+              name: "",
+              age: "",
+              DOB: "",
+              gender: "male",
+              food: "",
+              hobbies: "",
+            },
+            item: "submit",
+            flag: true,
+          });
         }}
       >
         ADD USERS
