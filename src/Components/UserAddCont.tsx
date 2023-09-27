@@ -2,7 +2,7 @@ import { useStore } from "@/Data/store";
 import style from "@/Styles/UserAddCont.module.css";
 
 const UserAddCont = () => {
-  const { setPopUpHandler } = useStore();
+  const { popUp, setPopUpHandler } = useStore();
 
   return (
     <div className={style.userAddCont}>
@@ -10,7 +10,7 @@ const UserAddCont = () => {
       <button
         className={style.userAddBtn}
         onClick={() => {
-          setPopUpHandler({ item: "submit", flag: true });
+          setPopUpHandler({ user: popUp.user, item: "submit", flag: true });
         }}
       >
         ADD USERS
